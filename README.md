@@ -20,9 +20,15 @@ Requirements:
 Configure the Windows prototype with:
 
 ```powershell
-cmake -S . -B build -DPMP_RENDER_BACKEND=auto
-cmake --build build --config Debug
+cmake -S . -B build-msvc -G "Visual Studio 17 2022" -A x64 `
+  -DCMAKE_PREFIX_PATH=D:/DEV/QT/6.10.1/msvc2022_64 `
+  -DPMP_RENDER_BACKEND=auto
+cmake --build build-msvc --config Debug
 ```
+
+`CMAKE_PREFIX_PATH` must point to the Qt kit that matches the compiler. The
+MSVC generator uses `msvc2022_64`; a MinGW generator must use
+`D:/DEV/QT/6.10.1/mingw_64` instead.
 
 Other backend selections are explicit:
 
@@ -59,4 +65,3 @@ GPU viewport / offline renderer
 ## License
 
 MIT. Third-party dependencies keep their own licenses.
-
