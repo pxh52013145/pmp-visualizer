@@ -1,6 +1,8 @@
 #pragma once
 
 #include <QMainWindow>
+#include <QString>
+#include <QStringList>
 
 namespace pmp {
 
@@ -18,4 +20,3 @@ private:
 };
 
 } // namespace pmp
-

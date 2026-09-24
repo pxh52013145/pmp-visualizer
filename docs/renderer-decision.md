@@ -16,9 +16,9 @@ The cost is that bgfx defines its own resource and shader model. Advanced API-sp
 
 ## bgfx and commercial software
 
-bgfx is permissively licensed and is used in shipped games, tools, visualization products, and proprietary engines. Many commercial users do not publish a complete dependency list, so there is no reliable official catalog of flagship products to use as a compatibility guarantee. The stronger public evidence is the maturity of its backend implementations, shader compiler, examples, and long-running adoption in private engines.
+bgfx uses the permissive BSD 2-Clause license. Its official repository maintains a public “Who is using it?” list with shipped games, tools, and visualization products. Examples include Crypt of the NecroDancer, Football Manager, MAME, Nira, HARFANG Studio, Braid: Anniversary Edition, World of Goo 2, Minecraft Vibrant Visuals, and the Metal Gear Solid 4 remaster. The list is useful evidence of backend maturity, but it is not a guarantee that every bgfx feature fits a production editor.
 
-For this project, the relevant question is not whether a famous product uses bgfx. It is whether we want to own multiple graphics backends and shader pipelines. A small team should benchmark that maintenance cost against the constraints introduced by bgfx before committing.
+For this project, the relevant question is whether we want to own multiple graphics backends and shader pipelines. A small team should benchmark that maintenance cost against the constraints introduced by bgfx before committing.
 
 ## Native D3D12 and Vulkan
 
@@ -38,4 +38,3 @@ The recommended path is:
 - Choose native D3D12 when Windows quality, PIX diagnostics, and maximum control are the top priorities.
 - Choose bgfx when shipping several graphics backends quickly is more important than API-specific control.
 - Choose Vulkan directly when Linux/macOS portability and explicit control are requirements from the beginning.
-
