@@ -17,8 +17,21 @@ qt_add_executable(pmp-visualizer
     src/main.cpp
     src/app/MainWindow.cpp
     src/app/MainWindow.hpp
+    src/core/VisualizerModel.cpp
+    src/core/VisualizerModel.hpp
+    src/ipc/SpectrumProtocol.cpp
+    src/ipc/SpectrumProtocol.hpp
     src/render/Renderer.hpp
     src/render/Renderer.cpp
+    src/ui/StudioTheme.hpp
+    src/ui/ViewportWidget.cpp
+    src/ui/ViewportWidget.hpp
+    src/ui/OutlinerWidget.cpp
+    src/ui/OutlinerWidget.hpp
+    src/ui/InspectorWidget.cpp
+    src/ui/InspectorWidget.hpp
+    src/ui/TimelineWidget.cpp
+    src/ui/TimelineWidget.hpp
 )
 
 target_include_directories(pmp-visualizer PRIVATE src)
@@ -52,4 +65,3 @@ if(PMP_RENDER_BACKEND STREQUAL "native-vulkan")
 endif()
 
 set_target_properties(pmp-visualizer PROPERTIES WIN32_EXECUTABLE TRUE OUTPUT_NAME "pmp-visualizer")
-
